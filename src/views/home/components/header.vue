@@ -19,6 +19,7 @@ export default {
   left 0
   right 0
   height 40px
+  z-index 100
   background lightblue 
   border-bottom solid 5px lightblue
   .head1

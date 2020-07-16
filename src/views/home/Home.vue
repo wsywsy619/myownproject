@@ -1,16 +1,25 @@
 <template>
   <div class="home border-bottom">
-   <headtop></headtop> 
+   <headtop></headtop>
+   <headattach></headattach>
+   <headtool></headtool>
+   <headlist></headlist>
   <div class="content"></div>
   </div>
 </template>
 
 <script>
 import headtop from './components/header'
+import headattach from './components/main'
+import headtool from './components/sidebar'
+import headlist from './components/songlist'
 export default {
   name: 'Home',
   components: {
-    headtop
+    headtop,
+    headattach,
+    headtool,
+    headlist
   }
 }
 </script>
