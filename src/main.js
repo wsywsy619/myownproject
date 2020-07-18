@@ -7,6 +7,9 @@ import './assets/styles/border.css'
 import './assets/styles/reset.css'
 import './assets/styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
+import animate from 'animate.css'
+
+Vue.use(animate)
 
 
 Vue.config.productionTip = false

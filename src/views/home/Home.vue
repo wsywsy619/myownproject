@@ -4,6 +4,7 @@
    <headattach></headattach>
    <headtool></headtool>
    <headlist></headlist>
+   <headtoutiao></headtoutiao>
   <div class="content"></div>
   </div>
 </template>
@@ -13,13 +14,15 @@ import headtop from './components/header'
 import headattach from './components/main'
 import headtool from './components/sidebar'
 import headlist from './components/songlist'
+import headtoutiao from './components/bottom'
 export default {
   name: 'Home',
   components: {
     headtop,
     headattach,
     headtool,
-    headlist
+    headlist,
+    headtoutiao
   }
 }
 </script>
