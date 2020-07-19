@@ -2,9 +2,9 @@
 <div class="head">
 <div class="headtitle">
      <span class="iconfont">&#xe61b;</span>
-     <span>音乐日历</span><button @click="handleclick">显示</button>
-     <transition type="transition" appear appear-active-class="animate__animated animate__bounce" enter-active-class="v-enter-active" leave-active-class="v-leave-active">
-     <div class="content" v-if="show"><span class="date">07-25</span><br><br><p><span class="wenzi">今日火星陨落</span></p></div>
+     <span>音乐日历</span>
+     <transition>
+     <div class="content" v-if="show"><span class="date">{{datacontent.date}}</span><br><br><p><span class="wenzi">{{datacontent.content}}</span></p></div>
      </transition>
 </div>    
 </div>
@@ -14,15 +14,59 @@ export default {
   name: 'toutiao',
   data () {
       return {
-          show: true
-      }
+          show: true,
+          datalist: [{
+            date: '07-25',
+            content: '今日火星陨落'
+          }
+          ,{
+            date: '07-26',
+            content: '今日水星陨落'
+          },{
+            date: '07-27',
+            content: '今日冥王星陨落'
+           }],
+           datacontent: {
+            date: '',
+            content: ''
+          }
+           
+           
+      }},
+      computed: {
+    len () {
+      return this.datalist.length
+    }
   },
-  methods: {
-      handleclick () {
-          this.show = !this.show
-      }
-  }
+  mounted () {
+    var x =0
+    let y = 0 
+    const that = this  //进入setimeout后this的指向会丢失所以在闭包内用that记住this
+    if(this.datalist[0])
+    {this.datacontent = this.datalist[0]
+    }
+    var f=setTimeout(function h () {//之前的困难时消失的时间和出现的时间一样但是我想要的效果是出现的时间（5s）大于消失的时间(1s)
+    
+    if(y==that.len){
+      y = 0
+    }
+    if(that.show)//执行第一次h函数时候that.show==true因为这个show是我在data最先定义过的
+    {
+      y++
+      that.show = !that.show//第一次时候变为false消失
+      setTimeout(h,500)//控制从消失到出现的间隔时间,进入第二个h函数它负责将数据转换到datalist[1]并且show被变为true
+    }else{
+     that.datacontent = that.datalist[y]
+     that.show= !that.show
+     setTimeout(h,5000)//控制持续时间
+    }
+    }
+    ,5000)
+    
 }
+}
+      
+      
 </script>
 <style lang="stylus" scoped>
 .head
@@ -54,8 +98,8 @@ export default {
         color #9E9E9E
         font-size 4vw
         text-indent 100px
-.v-enter,.v-leave-to 
+.v-enter, .v-leave-to 
 	opacity 0
-.v-enter-active,.v-leave-active
-	transition opacity 5s
+.v-enter-active, .v-leave-active
+  transition opacity 500ms
 </style>
