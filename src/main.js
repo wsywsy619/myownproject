@@ -10,10 +10,9 @@ import 'swiper/dist/css/swiper.css'
 import animate from 'animate.css'
 
 Vue.use(animate)
-
+Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false
-Vue.use(VueAwesomeSwiper)
 new Vue({
   router,
   store,
