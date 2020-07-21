@@ -1,11 +1,18 @@
 <template>
   <div class="home border-bottom">
-   <headtop></headtop>
+    <headtop></headtop>
+    <swiper :options="swiperOptions">
+      <swiper-slide>
    <headattach></headattach>
    <headtool></headtool>
    <headlist></headlist>
    <headtoutiao></headtoutiao>
   <div class="content"></div>
+  </swiper-slide>
+  <swiper-slide>
+   <div class="content"></div>
+  </swiper-slide>
+  </swiper>
   </div>
 </template>
 
@@ -23,6 +30,12 @@ export default {
     headtool,
     headlist,
     headtoutiao
+  },
+  data () {
+    return {
+    swiperOptions: {
+            autoplay:false
+          }}
   }
 }
 </script>
