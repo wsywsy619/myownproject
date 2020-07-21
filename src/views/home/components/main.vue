@@ -1,7 +1,7 @@
 <template>
   <div class="head">
     <div class="headyifu">
-    <swiper :options="swiperOptions">
+    <swiper :options="swiperOptions" class="wert">
     <swiper-slide><img src="http://p1.music.126.net/7pxwS_nmTjacpBgYrCbLIA==/109951165140301808.jpg?imageView&quality=89" alt="diyi"></swiper-slide>
     <swiper-slide><img src="http://p1.music.126.net/5AZy9EMcvjN4HZggWSb0Nw==/109951165141849316.jpg?imageView&quality=89" alt="dier"></swiper-slide>
     <swiper-slide><img src="http://p1.music.126.net/baWhRWaAzB7_gQz_U4F4kA==/109951165141423818.jpg?imageView&quality=89" alt="disan"></swiper-slide>
@@ -18,8 +18,7 @@ export default {
   data() {
       return {
         swiperOptions: {
-            pagination: '.swiper-pagination'
-        ,
+          pagination: '.swiper-pagination',
           loop: true,
           autoplay : 5000, //设置自动播放并且设置间隔时间
           autoplayDisableOnInteraction: false//在干扰转动的时候是否能够继续转动下去

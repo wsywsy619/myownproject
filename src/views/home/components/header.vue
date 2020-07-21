@@ -56,7 +56,7 @@ export default {
         border-radius 9px
         margin-left -9px/*设置长方形居中显示*/
 .head
-  position fixed 
+  position fixed
   left 0
   right 0
   height 40px
@@ -64,7 +64,7 @@ export default {
   background lightblue 
   border-bottom solid 1px lightblue
   .head1
-    display flex
+    display flex 
     justify-content space-between
     color #fff
     .shou
