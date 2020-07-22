@@ -2,7 +2,7 @@
   <div class="head">
     <div class="head1" :class="{'colordisplay':display}">
     <div class="shou" :class="{'colordisplay1':display}">首页</div>
-    <div class="wode" :class="{'colordisplay2':display}">我的音乐</div>
+    <div class="wode" :class="{'colordisplay1':display}">我的音乐</div>
     <div class="icon"><span class="iconfont" :class="{'colordisplay1':display}">&#xe61d;</span></div>
    </div>
   </div>
@@ -42,19 +42,8 @@ export default {
   border-bottom solid 1px #d6d2d1
   .colordisplay1
     color lightblue
-  .colordisplay2
-    color lightblue
-    &:after/*设置长方形*/
-        content: ''
-        width 18px
-        height 4px
-        overflow hidden
-        position absolute
-        background lightblue
-        top 85%
-        left 10%
-        border-radius 9px
-        margin-left -9px/*设置长方形居中显示*/
+
+    
 .head
   position fixed
   left 0
@@ -69,23 +58,12 @@ export default {
     color #fff
     .shou
       width 20%
-      text-align center
+      padding-left 7vw
       line-height 40px
       font-size 20px
       position relative
-      &:after/*设置长方形*/
-        content: ''
-        width 18px
-        height 4px
-        overflow hidden
-        position absolute
-        background-color #fff
-        top 85%
-        left 50%
-        border-radius 9px
-        margin-left -9px/*设置长方形居中显示*/
     .wode
-      font-size 18px
+      font-size 19px
       text-align left
       line-height 40px
       width 70%

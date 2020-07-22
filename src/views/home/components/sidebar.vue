@@ -11,13 +11,13 @@ export default {
 <style lang="stylus" scoped>
 .head
   width 100%
-  height 50px
-  margin-top 95px
+
+  margin-top 80px
   display flex
   div
     width 25%
     text-align center
     color lightblue
     span 
-      font-size 40px
+      font-size 14vw
 </style>

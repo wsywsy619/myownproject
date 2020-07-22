@@ -72,7 +72,7 @@ export default {
 .head
   width 88%
   margin 0 auto
-  margin-top 33%
+  margin-top 5%
   height 0
   padding-bottom 30%
   border solid 1px #EAEAEA	

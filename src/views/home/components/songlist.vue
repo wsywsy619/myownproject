@@ -100,14 +100,14 @@ export default {
 .head
   width 88%
   margin 2% auto
-  height 35px
-  border-bottom solid 3px lightblue
   .headtitle
-    height 22px
+    height 5vw
+    padding-bottom 8px
+    border-bottom solid 3px lightblue
     div
       color lightblue
       float left
-      font-size 22px
+      font-size 5vw
       font-weight 550
     button
       float right
@@ -115,6 +115,7 @@ export default {
       border-radius 15px
       border solid 1px #ccc
       background white
+      font-size 2.5vw
   .wrapper
     margin-top 35px
     width 100%

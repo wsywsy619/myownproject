@@ -28,8 +28,8 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-.headyifu >>> .swiper-pagination-bullet-active
-  background-color white 
+.headyifu >>> .swiper-pagination-bullet
+  background red 
 .head
   width 100%
   height 100%
@@ -41,7 +41,8 @@ export default {
     width 88%
     background ivory
     position relative
-    bottom -85px
+    bottom -10vw
+    top 60px
     left 50%
     margin-left -44%
     border-radius 13px
@@ -49,6 +50,7 @@ export default {
     position: relative /*relative与 z-index 用于解决手机上overflow hidden 失效的问题 */
     z-index 1
     box-shadow 10px -10px 3px #888888;
-    img  
-      width 100%
+    img
+      width 100%  
+
 </style>
