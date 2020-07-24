@@ -8,13 +8,13 @@
    <headtool></headtool>
    <headlist></headlist>
    <headtoutiao></headtoutiao>
-  <div class="content"></div>
+  <div class="content">底下没有啦开去排行榜看看吧</div>
   </swiper-slide>
   <swiper-slide>
-
-   <div class="content"></div>
+    <myheadtop></myheadtop>
+<div class="content"></div>
   </swiper-slide>
-  
+  <myheadtop></myheadtop>
   </swiper>
   </div>
 </template>
@@ -25,6 +25,7 @@ import headattach from './components/main'
 import headtool from './components/sidebar'
 import headlist from './components/songlist'
 import headtoutiao from './components/bottom'
+import myheadtop from './components/myheader'
 export default {
   name: 'Home',
   components: {
@@ -32,7 +33,8 @@ export default {
     headattach,
     headtool,
     headlist,
-    headtoutiao
+    headtoutiao,
+    myheadtop
   },
   data () {
     return {
@@ -45,7 +47,8 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-
+.home1
+  background white
 .home2 >>> .swiper-pagination-bullet
   border-radius 0
   width 16px
@@ -61,8 +64,14 @@ export default {
   background white
   
 .content
-  height 700px
+  margin-top 10px
+  margin-bottom 10px
+  height 4vw
+  line-height 4vw
   width 100%
+  text-align center
+  font-size 2vw
+  color #ccc
 .home2
   position fixed
   z-index 101
