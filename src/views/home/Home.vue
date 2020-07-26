@@ -14,7 +14,6 @@
     <myheadtop></myheadtop>
 <div class="content"></div>
   </swiper-slide>
-  <myheadtop></myheadtop>
   </swiper>
   </div>
 </template>
